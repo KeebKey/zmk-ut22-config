@@ -137,7 +137,7 @@
 		/***************
 		* 2 key combos
 		****************/
-		COMBO(R1,&kp ESC, RTR RTP, 0 1 2 3 4 5 6)		//ESC
+		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5 6)		//BACKSPACE
 		COMBO(R2,&kp M, RBI RBM, 0)				//M
 		COMBO(R3,&kp V, RBM RBR, 0)				//V
 		COMBO(R4,&kp H, RBR RBP, 0)				//H
@@ -146,6 +146,7 @@
 		* 3 key combos
 		****************/
 		COMBO(R5,&kp K, RBM RBR RBP, 0)				//K
+		COMBO(R6,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5 6)		//ESC
 		/***************
 		* 4 key combos
 		****************/
@@ -215,18 +216,18 @@
 
 /*  3 = High Frequency
 	.-----------------------------------------------------------.
-	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
-	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
-	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
+	|  -  | {[  |  (  |     |           |     |  )  |  ]} |  ;  |
+	|  !  |  @  |  #  |  $  |           |  %  |  &  |  *  |  '  |
+	|  \  |-----|  17 |  18 |           |  19 |  20 |-----|  /  |
 	'-----'     '-----------------------------------'     '-----'
 */
         // LAYER: HFREQ 3
 		hfreq_layer {
 			label = "HFreq";
 			bindings = <
-			&sk RALT    &kp LPAR  &kp RPAR    &none        &none       &kp LPAR    &kp RPAR   &sk RALT 
-			&sk LSHFT   &kp LBKT  &kp RBKT    &kp PIPE     &kp PIPE    &kp LBKT    &kp RBKT   &sk LSHFT
-			&to BASE              &kp LCTRL   &kp LSHIFT   &kp LSHIFT  &kp LCTRL              &to BASE     
+			&kp MINUS   &kp LBKT  &kp LPAR    &none        &none       &kp RPAR    &kp RBKT   &kp SEMI 
+			&kp EXCL    &kp AT    &kp HASH    &kp DLLR     &kp PRCNT   &kp AMPS    &kp ASTRK  &kp APOS
+			&kp BSLH              &kp LCTRL   &kp LSHIFT   &kp LSHIFT  &kp LCTRL              &kp FSLH     
 			>;
 		};
 // -----------------------------------------------------------------------------
