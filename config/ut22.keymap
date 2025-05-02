@@ -315,8 +315,8 @@
 		lfreq_layer {
 			label = "LFreq";
 			bindings = <
-			&kp GRAVE   &kp SEMI    &kp COLON   &kp BSLH    &kp BSLH    &kp COLON   &kp SEMI   &sk GRAVE 
-			&kp EXCL    &kp MINUS   &kp QMARK   &none       &none       &kp QMARK   &kp MINUS  &sk EXCL
+			&kp GRAVE   &kp SEMI    &kp COLON   &kp BSLH    &kp BSLH    &kp COLON   &kp SEMI   &kp GRAVE 
+			&kp EXCL    &kp MINUS   &kp QMARK   &none       &none       &kp QMARK   &kp MINUS  &kp EXCL
 			&to BASE              &kp LCTRL   &kp LSHIFT    &kp LSHIFT  &kp LCTRL              &to BASE     
 			>;
 		};
