@@ -24,6 +24,7 @@
 &lt { quick_tap_ms = <200>; };
 // Sticky Layer Behavior - release sticky behavior after x ms
 &sk { release-after-ms = <1800>; };
+&mt { tapping-term-ms = <200>; };
 
 // TAIPO DEFINITIONS (use in conjunction with TAIPO COMBOS)
 // ====================================================
@@ -138,9 +139,9 @@
 		* 2 key combos
 		****************/
 		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5 6)		//BACKSPACE
-		COMBO(R2,&kp M, RBI RBM, 0)				//M
-		COMBO(R3,&kp V, RBM RBR, 0)				//V
-		COMBO(R4,&kp H, RBR RBP, 0)				//H
+		COMBO(R2,&kp M, RTI RTM, 0)				//M
+		COMBO(R3,&kp V, RBM RBR, 0)				//
+		COMBO(R4,&kp H, RBR RBP, 0)				//
 
 		/***************
 		* 3 key combos
@@ -158,9 +159,9 @@
 
 /*  0 = Base
 	.-----------------------------------------------------------.
-	|  W  |  F  |  P  |  B  |           |  J  |  L  |  U  |  Y  |
 	|  A  |  R  |  S  |  T  |           |  N  |  E  |  I  |  O  |
-	|LCTRL|-----|LSHFT|SPACE|           |ENTER|LALT |-----| LGUI|
+	|  Z  |  C  |  D  |  V  |           |  P  |  B  |  L  |  U  |
+	|  =  |-----|HFREQ|SPACE|           |ENTER|LFREQ|-----|  /  |
 	'-----'     '-----------------------------------'     '-----'
 */
 	keymap {
@@ -170,9 +171,9 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&lt CUSTOM W	&kp F       &kp P       &lt HFREQ B    &lt HFREQ J &kp L      	&kp U       &lt CUSTOM Y
-			&lt EXTRA A	&kp R       &kp S	&lt LFREQ T    &lt LFREQ N &kp E  	&kp I       &lt EXTRA O
-			&kp LCTRL               &kp LSHIFT   &lt NUMBERS SPACE      &lt NAVIGATION ENTER  &kp RALT		    &kp LGUI
+			&mt LGUI A	&mt LALT R	&mt LCTRL S	&mt LSHIFT T	&mt RSHIFT N	&mt RCTRL E	&mt RALT I	&mt LGUI O
+			&lt EXTRA Z	&kp C       	&kp D		&lt LFREQ V     &lt LFREQ P 	&kp B  		&kp L       	&lt EXTRA U
+			&kp EQUAL             &lt HFREQ PERIOD   &lt NUMBERS SPACE      &lt NAVIGATION ENTER  &lt LFREQ COMMA		&kp FSLH
 			>;
 		};
 
