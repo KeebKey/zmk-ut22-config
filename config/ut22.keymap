@@ -15,9 +15,7 @@
 #define NAVIGATION 	2
 #define HFREQ 		3
 #define LFREQ 		4
-#define CUSTOM 		5
-#define EXTRA		6
-#define BLE		7
+#define BLE		5
 
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
@@ -107,13 +105,13 @@
 		/***************
 		* 2 key combos
 		****************/
-		COMBO(L1,&kp ENTER,LTI LBI,0 1 2 3 4 5 6)		// ENTER
-		COMBO(L2,&sk LCTRL,LBI LTP, 0 1 2 3 4 5 6)		// LCTRL *oneshot
-		COMBO(L3,&sk LGUI,LBM LTP, 0 1 2 3 4 5 6)		// LGUI  *oneshot
-		COMBO(L4,&sk RALT,LBR LTP, 0 1 2 3 4 5 6)		// RALT  *oneshot
-		COMBO(L5,&kp BACKSPACE,LBI LTM, 0 1 2 3 4 5 6)		// BACKSPACE
-		COMBO(L6,&kp DELETE,LBR LTM, 0 1 2 3 4 5 6)		// DELETE
-		COMBO(L7,&kt LSHFT,LBM LTM, 0 1 2 3 4 5 6)		// LSHIFT #toggle
+		COMBO(L1,&kp ENTER,LTI LBI,0 1 2 3 4 5)			// ENTER
+		COMBO(L2,&sk LCTRL,LBI LTP, 0 1 2 3 4 5)		// LCTRL *oneshot
+		COMBO(L3,&sk LGUI,LBM LTP, 0 1 2 3 4 5)			// LGUI  *oneshot
+		COMBO(L4,&sk RALT,LBR LTP, 0 1 2 3 4 5)			// RALT  *oneshot
+		COMBO(L5,&kp BACKSPACE,LBI LTM, 0 1 2 3 4 5)		// BACKSPACE
+		COMBO(L6,&kp DELETE,LBR LTM, 0 1 2 3 4 5)		// DELETE
+		COMBO(L7,&kt LSHFT,LBM LTM, 0 1 2 3 4 5)		// LSHIFT #toggle
 
 		COMBO(L8,&kp Q,LBM LBR, 0)				//Q
 		COMBO(L9,&kp G,LTM LTI, 0)				//G
@@ -129,14 +127,14 @@
 		* 4 key combos
 		****************/
 
-		COMBO(L12,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5 6)		// TAB
-		COMBO(L13,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5 6)		// LAYER: BLUETOOTH #toggle
+		COMBO(L12,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5)		// TAB
+		COMBO(L13,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5)		// LAYER: BLUETOOTH #toggle
 
 		// RIGHT SIDE
 		/***************
 		* 2 key combos
 		****************/
-		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5 6)		//BACKSPACE
+		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5)		//BACKSPACE
 		COMBO(R2,&kp M, RTI RTM, 0)				//M
 		COMBO(R3,&kp F, RBI RBM, 0)				//F
 		COMBO(R4,&kp K, RBM RBR, 0)				//K
@@ -147,7 +145,7 @@
 		* 3 key combos
 		****************/
 		COMBO(R7,&kp J, RBI RBM RBR, 0)				//J
-		COMBO(R8,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5 6)		//ESC
+		COMBO(R8,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5)		//ESC
 		/***************
 		* 4 key combos
 		****************/
@@ -251,14 +249,14 @@
 		};
 // -----------------------------------------------------------------------------
 
-/*  7 = Bluetooth
+/*  5 = Bluetooth
 	.-----------------------------------------------------------.
 	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
 	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
 	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
 	'-----'     '-----------------------------------'     '-----'
 */
-        // LAYER: BLUETOOTH 7
+        // LAYER: BLUETOOTH 5
 		ble_layer {
 			label = "BLE";
 			bindings = <
