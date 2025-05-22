@@ -117,20 +117,20 @@
 
 		COMBO(L8,&kp Q,LBM LBR, 0)				//Q
 		COMBO(L9,&kp G,LTM LTI, 0)				//G
-		COMBO(L10,&kp Z,LBP LBR, 0)				//X
+		COMBO(L10,&kp X,LBP LBR, 0)				//X
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(L12,&kp X,LBR LBM LBI, 0)				//W
+		COMBO(L11,&kp W,LBR LBM LBI, 0)				//W
 		
 
 		/***************
 		* 4 key combos
 		****************/
 
-		COMBO(L39,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5 6)		// TAB
-		COMBO(L41,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5 6)		// LAYER: BLUETOOTH #toggle
+		COMBO(L12,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5 6)		// TAB
+		COMBO(L13,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5 6)		// LAYER: BLUETOOTH #toggle
 
 		// RIGHT SIDE
 		/***************
@@ -139,15 +139,15 @@
 		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5 6)		//BACKSPACE
 		COMBO(R2,&kp M, RTI RTM, 0)				//M
 		COMBO(R3,&kp F, RBI RBM, 0)				//F
-		COMBO(R3,&kp F, RBM RBR, 0)				//K
-		COMBO(R3,&kp F, RBR RBI, 0)				//H
-		COMBO(R3,&kp F, RTM RTR, 0)				//Y
+		COMBO(R4,&kp K, RBM RBR, 0)				//K
+		COMBO(R5,&kp H, RBR RBI, 0)				//H
+		COMBO(R6,&kp Y, RTM RTR, 0)				//Y
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(R5,&kp K, RBI RBM RBR, 0)				//J
-		COMBO(R6,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5 6)		//ESC
+		COMBO(R7,&kp J, RBI RBM RBR, 0)				//J
+		COMBO(R8,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5 6)		//ESC
 		/***************
 		* 4 key combos
 		****************/
