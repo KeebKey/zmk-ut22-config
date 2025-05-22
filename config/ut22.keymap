@@ -172,7 +172,7 @@
 			label = "Base";
 			bindings = <
 			&mt LGUI A	&mt LALT R	&mt LCTRL S	&mt LSHIFT T	&mt RSHIFT N	&mt RCTRL E	&mt RALT I	&mt LGUI O
-			&lt EXTRA Z	&kp C       	&kp D		&lt LFREQ V     &lt LFREQ P 	&kp B  		&kp L       	&lt EXTRA U
+			&kp Z		&kp C       	&kp D		&lt LFREQ V     &lt LFREQ P 	&kp B  		&kp L       	&kp U
 			&kp EQUAL             &lt HFREQ PERIOD   &lt NUMBERS SPACE      &lt NAVIGATION ENTER  &lt LFREQ COMMA		&kp FSLH
 			>;
 		};
@@ -199,8 +199,8 @@
 
 /*  2 = Navigation
 	.-----------------------------------------------------------.
-	|  F1 |  F2 |  F3 |  F4 |           |  4  |  5  |  6  |  7  |
-	|  F5 |  F10|  F11|  F12|           |  12 |  13 |  14 |  15 |
+	|  F1 |  F2 |  F3 |  F4 |           |HOME |  UP | END | PgU |
+	|  F5 |  F10|  F11|  F12|           |  <- |DOWN |  -> | PgD |
 	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
 	'-----'     '-----------------------------------'     '-----'
 */
@@ -208,7 +208,7 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			&kp F1     &kp F2       &kp F3      &kp F4         &kp END        &kp UP      &kp HOME    &kp LC(PG_UP)
+			&kp F1     &kp F2       &kp F3      &kp F4         &kp HOME        &kp UP      &kp END    &kp LC(PG_UP)
 			&kp F5     &kp F10      &kp F11     &kp F12        &kp LEFT       &kp DOWN    &kp RIGHT   &kp LC(PG_DN)
 			&to BASE                &kp LCTRL   &kp LSHIFT     &kp LSHIFT     &kp LCTRL               &to BASE     
 			>;
@@ -247,42 +247,6 @@
 			&kp GRAVE   &kp SEMI    &kp COLON   &kp BSLH    &kp BSLH    &kp COLON   &kp SEMI   &kp GRAVE 
 			&kp EXCL    &kp MINUS   &kp QMARK   &none       &none       &kp QMARK   &kp MINUS  &kp EXCL
 			&to BASE              &kp LCTRL   &kp LSHIFT    &kp LSHIFT  &kp LCTRL              &to BASE     
-			>;
-		};
-// -----------------------------------------------------------------------------
-
-/*  5 = Media
-	.-----------------------------------------------------------.
-	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
-	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
-	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
-	'-----'     '-----------------------------------'     '-----'
-*/
-        // LAYER: CUSTOM 5
-		custom_layer {
-			label = "Custom";
-			bindings = <
-			&none  		&kp LS(LT)    	&kp LS(GT)     	&sk LALT        &sk LALT    &kp LS(GT)   &kp LS(LT)     &none
-			&sk LGUI	&kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE      &kp C_MUTE  &kp C_VOL_UP &kp C_VOL_DN   &sk LGUI
-			&to BASE                    &kp LCTRL       &kp LSHIFT      &kp LSHIFT  &kp LCTRL                   &to BASE     
-			>;
-		};
-// -----------------------------------------------------------------------------
-
-/*  6 = Extras
-	.-----------------------------------------------------------.
-	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
-	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
-	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
-	'-----'     '-----------------------------------'     '-----'
-*/
-        // LAYER: EXTRA 6
-		extra_layer {
-			label = "Extra";
-			bindings = <
-			&none		&kp COMMA  	    &kp PERIOD	&kp BACKSPACE           &kp BACKSPACE       &kp PERIOD    &kp COMMA     &none
-			&none 		&kp LC(DEL) 	&kp DEL 	&kp LC(BACKSPACE)       &kp LC(BACKSPACE)   &kp DEL       &kp LC(DEL)   &none
-			&to BASE                    &kp LCTRL   &kp LSHIFT              &kp LSHIFT  &kp LCTRL                           &to BASE     
 			>;
 		};
 // -----------------------------------------------------------------------------
