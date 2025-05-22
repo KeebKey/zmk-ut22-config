@@ -106,29 +106,24 @@
 		* 2 key combos
 		****************/
 		COMBO(L1,&kp ENTER,LTI LBI,0 1 2 3 4 5)			// ENTER
-		COMBO(L2,&sk LCTRL,LBI LTP, 0 1 2 3 4 5)		// LCTRL *oneshot
-		COMBO(L3,&sk LGUI,LBM LTP, 0 1 2 3 4 5)			// LGUI  *oneshot
-		COMBO(L4,&sk RALT,LBR LTP, 0 1 2 3 4 5)			// RALT  *oneshot
-		COMBO(L5,&kp BACKSPACE,LBI LTM, 0 1 2 3 4 5)		// BACKSPACE
-		COMBO(L6,&kp DELETE,LBR LTM, 0 1 2 3 4 5)		// DELETE
-		COMBO(L7,&kt LSHFT,LBM LTM, 0 1 2 3 4 5)		// LSHIFT #toggle
+		COMBO(L2,&kp DELETE,LBR LTM, 0 1 2 3 4 5)		// DELETE
 
-		COMBO(L8,&kp Q,LBM LBR, 0)				//Q
-		COMBO(L9,&kp G,LTM LTI, 0)				//G
-		COMBO(L10,&kp X,LBP LBR, 0)				//X
+		COMBO(L3,&kp Q,LBM LBR, 0)				//Q
+		COMBO(L4,&kp G,LTM LTI, 0)				//G
+		COMBO(L5,&kp X,LBP LBR, 0)				//X
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(L11,&kp W,LBR LBM LBI, 0)				//W
+		COMBO(L6,&kp W,LBR LBM LBI, 0)				//W
 		
 
 		/***************
 		* 4 key combos
 		****************/
 
-		COMBO(L12,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5)		// TAB
-		COMBO(L13,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5)		// LAYER: BLUETOOTH #toggle
+		COMBO(L7,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5)		// TAB
+		COMBO(L8,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5)		// LAYER: BLUETOOTH #toggle
 
 		// RIGHT SIDE
 		/***************
