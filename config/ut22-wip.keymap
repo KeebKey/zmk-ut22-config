@@ -115,16 +115,14 @@
 		COMBO(L6,&kp DELETE,LBR LTM, 0 1 2 3 4 5 6)		// DELETE
 		COMBO(L7,&kt LSHFT,LBM LTM, 0 1 2 3 4 5 6)		// LSHIFT #toggle
 
-		COMBO(L8,&kp Q,LTP LTR, 0)				//Q
-		COMBO(L9,&kp G,LBM LBI, 0)				//G
-		COMBO(L10,&kp Z,LBP LBR, 0)				//Z
-		COMBO(L11,&kp C,LBR LBM, 0)				//C
+		COMBO(L8,&kp Q,LBM LBR, 0)				//Q
+		COMBO(L9,&kp G,LTM LTI, 0)				//G
+		COMBO(L10,&kp Z,LBP LBR, 0)				//X
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(L12,&kp X,LBP LBR LBM, 0)				//X
-		COMBO(L13,&kp D,LBR LBM LBI, 0)				//D
+		COMBO(L12,&kp X,LBR LBM LBI, 0)				//W
 		
 
 		/***************
@@ -140,13 +138,15 @@
 		****************/
 		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5 6)		//BACKSPACE
 		COMBO(R2,&kp M, RTI RTM, 0)				//M
-		COMBO(R3,&kp V, RBM RBR, 0)				//
-		COMBO(R4,&kp H, RBR RBP, 0)				//
+		COMBO(R3,&kp F, RBI RBM, 0)				//F
+		COMBO(R3,&kp F, RBM RBR, 0)				//K
+		COMBO(R3,&kp F, RBR RBI, 0)				//H
+		COMBO(R3,&kp F, RTM RTR, 0)				//Y
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(R5,&kp K, RBM RBR RBP, 0)				//K
+		COMBO(R5,&kp K, RBI RBM RBR, 0)				//J
 		COMBO(R6,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5 6)		//ESC
 		/***************
 		* 4 key combos
