@@ -22,7 +22,7 @@
 &lt { quick_tap_ms = <200>; };
 // Sticky Layer Behavior - release sticky behavior after x ms
 &sk { release-after-ms = <1800>; };
-&mt { tapping-term-ms = <200>; };
+&mt { tapping-term-ms = <300>; };
 
 // TAIPO DEFINITIONS (use in conjunction with TAIPO COMBOS)
 // ====================================================
