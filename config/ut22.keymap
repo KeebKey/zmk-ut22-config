@@ -129,7 +129,7 @@
 		/***************
 		* 2 key combos
 		****************/
-		COMBO(R1,&kp BACKSPACE, RTR RTP, 0 1 2 3 4 5)		//BACKSPACE
+		COMBO(R1,&kp BACKSPACE, RBR RBpP, 0 1 2 3 4 5)		//BACKSPACE
 		COMBO(R2,&kp M, RTI RTM, 0)				//M
 		COMBO(R3,&kp F, RBI RBM, 0)				//F
 		COMBO(R4,&kp K, RBM RBR, 0)				//K
