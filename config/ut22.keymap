@@ -22,7 +22,7 @@
 &lt { quick_tap_ms = <200>; };
 // Sticky Layer Behavior - release sticky behavior after x ms
 &sk { release-after-ms = <1800>; };
-&mt { tapping-term-ms = <300>; };
+&mt { tapping-term-ms = <400>; };
 
 // TAIPO DEFINITIONS (use in conjunction with TAIPO COMBOS)
 // ====================================================
@@ -106,7 +106,8 @@
 		* 2 key combos
 		****************/
 		COMBO(L1,&kp ENTER,LTI LBI,0 1 2 3 4 5)			// ENTER
-		COMBO(L2,&kp DELETE,LBR LTM, 0 1 2 3 4 5)		// DELETE
+		COMBO(R8,&kp ESC,LTR LTM, 0 1 2 3 4 5)			//ESC
+		COMBO(L7,&kp TAB,LTP LTR ,0 1 2 3 4 5)			// TAB
 
 		COMBO(L3,&kp Q,LBM LBR, 0)				//Q
 		COMBO(L4,&kp G,LTM LTI, 0)				//G
@@ -121,8 +122,6 @@
 		/***************
 		* 4 key combos
 		****************/
-
-		COMBO(L7,&kp TAB,LTP LTR LTM LTI,0 1 2 3 4 5)		// TAB
 		COMBO(L8,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5)		// LAYER: BLUETOOTH #toggle
 
 		// RIGHT SIDE
@@ -130,6 +129,8 @@
 		* 2 key combos
 		****************/
 		COMBO(R1,&kp BACKSPACE, RBR RBP, 0 1 2 3 4 5)		//BACKSPACE
+		COMBO(L2,&kp DELETE,RBI RTP, 0 1 2 3 4 5)		//DELETE
+
 		COMBO(R2,&kp M, RTI RTM, 0)				//M
 		COMBO(R3,&kp F, RBI RBM, 0)				//F
 		COMBO(R4,&kp K, RBM RBR, 0)				//K
@@ -140,7 +141,6 @@
 		* 3 key combos
 		****************/
 		COMBO(R7,&kp J, RBI RBM RBR, 0)				//J
-		COMBO(R8,&kp ESC,RBI RTR RTP, 0 1 2 3 4 5)		//ESC
 		/***************
 		* 4 key combos
 		****************/
@@ -153,7 +153,7 @@
 /*  0 = Base
 	.-----------------------------------------------------------.
 	|  A  |  R  |  S  |  T  |           |  N  |  E  |  I  |  O  |
-	|  Z  |  C  |  D  |  V  |           |  P  |  B  |  L  |  U  |
+	|  P  |  B  |  L  |  U  |	    |  C  |  D  |  V  |  Z  |
 	|  =  |-----|HFREQ|SPACE|           |ENTER|LFREQ|-----|  /  |
 	'-----'     '-----------------------------------'     '-----'
 */
@@ -165,8 +165,8 @@
 			label = "Base";
 			bindings = <
 			&mt LGUI A	&mt LALT R	&mt LCTRL S	&mt LSHIFT T	&mt RSHIFT N	&mt RCTRL E	&mt RALT I	&mt LGUI O
-			&kp Z		&kp C       	&kp D		&lt LFREQ V     &lt LFREQ P 	&kp B  		&kp L       	&kp U
-			&kp EQUAL             &lt HFREQ PERIOD   &lt NUMBERS SPACE      &lt NAVIGATION ENTER  &lt LFREQ COMMA		&kp FSLH
+			&kp P		&kp B       	&kp L		&kp U     	&kp C 		&kp D  		&kp V       	&kp Z
+			&kp EQUAL             &lt NUMBERS PERIOD   &lt HFREQ SPACE      &lt NAVIGATION ENTER  &lt LFREQ COMMA		&kp FSLH
 			>;
 		};
 
@@ -185,7 +185,7 @@
 			bindings = <
 			&kp PLUS    &kp N1      &kp N2      &kp N3         &kp N4      &kp N5      &kp N6      &kp PERIOD
 			&kp MINUS   &kp N7      &kp N8      &kp N9         &kp N0     &kp N2      &kp N3      &kp COMMA
-			&kp LCTRL               &kp LSHIFT  &kp SPACE      &kp ENTER   &kp RALT                &kp LGUI     
+			&kp LCTRL               &kp LCTRL  &kp LSHIFT      &kp LSHIFT   &kp LCTRL                &kp LGUI     
 			>;
 		};
 // -----------------------------------------------------------------------------
@@ -210,7 +210,7 @@
 
 /*  3 = High Frequency
 	.-----------------------------------------------------------.
-	|  -  | {[  |  (  |     |           |     |  )  |  ]} |  ;  |
+	|  -  | {[  |  (  |  =  |           |     |  )  |  ]} |  ;  |
 	|  !  |  @  |  #  |  $  |           |  %  |  &  |  *  |  '  |
 	|  \  |-----|  17 |  18 |           |  19 |  20 |-----|  /  |
 	'-----'     '-----------------------------------'     '-----'
@@ -219,14 +219,14 @@
 		hfreq_layer {
 			label = "HFreq";
 			bindings = <
-			&kp MINUS   &kp LBKT  &kp LPAR    &none        &none       &kp RPAR    &kp RBKT   &kp SEMI 
+			&kp MINUS   &kp LBKT  &kp LPAR    &kp EQUAL    &none       &kp RPAR    &kp RBKT   &kp SEMI 
 			&kp EXCL    &kp AT    &kp HASH    &kp DLLR     &kp PRCNT   &kp AMPS    &kp ASTRK  &kp APOS
 			&kp BSLH              &kp LCTRL   &kp LSHIFT   &kp LSHIFT  &kp LCTRL              &kp FSLH     
 			>;
 		};
 // -----------------------------------------------------------------------------
 
-/*  4 = Low Frequency
+/*  4 = Low Frequency (NOT USED)
 	.-----------------------------------------------------------.
 	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
 	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
