@@ -122,7 +122,6 @@
 		/***************
 		* 4 key combos
 		****************/
-		COMBO(L8,&tog BLE,LTP LBP LTI LBI,0 1 2 3 4 5)		// LAYER: BLUETOOTH #toggle
 
 		// RIGHT SIDE
 		/***************
