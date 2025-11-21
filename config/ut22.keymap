@@ -133,7 +133,7 @@
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(L6,&kp ESC,LTR LTM LTI  ,0 1 2 3 4 5)		//ESC
+		COMBO(L12,&kp ESC,LTR LTM LTI  ,0 1 2 3 4 5)		//ESC
 
 		/***************
 		* 4 key combos
