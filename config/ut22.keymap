@@ -158,13 +158,13 @@
 		//OBLIQUE
 		COMBO(R9,&kp GT,RTR RBI, 0)				//>
 		COMBO(R10,&kp SEMI,ROT RBM, 0)			//;
-		COMBO(R10,&kp COLON,ROT RBI, 0)			//:
+		COMBO(R11,&kp COLON,ROT RBI, 0)			//:
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(R6,&kp BACKSPACE, RTI RTM RTR, 0 1 2 3 4 5) 	//BACKSPACE
-		COMBO(R7,&kp ENTER, RBI RBM RBR, 0 1 2 3 4 5)		//ENTER
+		COMBO(R12,&kp BACKSPACE, RTI RTM RTR, 0 1 2 3 4 5) 	//BACKSPACE
+		COMBO(R13,&kp ENTER, RBI RBM RBR, 0 1 2 3 4 5)		//ENTER
 		/***************
 		* 4 key combos
 		****************/
