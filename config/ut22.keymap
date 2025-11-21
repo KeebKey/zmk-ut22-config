@@ -14,7 +14,7 @@
 #define NUMBERS 	1
 #define NAVIGATION 	2
 #define HFREQ 		3
-#define LFREQ 		4
+#define FUNCTION    4
 #define BLE		5
 
 
@@ -48,6 +48,9 @@
 #define LBR 9  // Ring
 #define LBP 8  // Pinky
 
+#define LIT 18 //Left Inner Thumb
+#define LOT 17 //Left Outer Thumb
+
 // RIGHT SIDE
 // Top
 #define RTI 4  // Index
@@ -59,6 +62,9 @@
 #define RBM 13 // Middle
 #define RBR 14 // Ring
 #define RBP 15 // Pinky
+
+#define RIT 19 //Right Inner Thumb
+#define ROT 20 //Right Outer Thumb
 
 // BEHAVIOR
 // ====================================================
@@ -105,16 +111,29 @@
 		/***************
 		* 2 key combos
 		****************/
-		COMBO(L1,&kp J,LBP LBR, 0)				//J
-		COMBO(L2,&kp Y,LBR LBM, 0)				//Y
-		COMBO(L3,&kp K,LBM LBI, 0)				//K
-		COMBO(L4,&kp W,LTM LTI, 0)				//W
+
+		//HORIZONTAL
+		COMBO(L1,&kp W,LTP LTR, 0)				//W
+		COMBO(L2,&kp M,LTR LTM, 0)				//M
+		COMBO(L3,&kp B,LTM LTI, 0)				//B
+		COMBO(L4,&kp P,LBM LBI, 0)				//P
+		COMBO(L5,&kp F,LBR LBM, 0)				//F
+
+		//VERTICAL
+		COMBO(L6,&kp LBRC,LTR LBR, 0)			//{
+		COMBO(L7,&kp LBKT,LTM LBM, 0)			//[
+		COMBO(L8,&kp LPAR,LTI LBI, 0)			//(
+
+		//OBLIQUE
+		COMBO(L9,&kp K,LTM LBI, 0)				//K
+		COMBO(L10,&kp MINUS,LTR LBM, 0)			//-
+		COMBO(L11,&kp LT,LTR LBI, 0)			//<
+		
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(L5,&kp TAB,LTR LTM LBI, 0 1 2 3 4 5)		//TAB
-		COMBO(L6,&kp ESC,LBR LTM LTI  ,0 1 2 3 4 5)		//ESC
+		COMBO(L6,&kp ESC,LTR LTM LTI  ,0 1 2 3 4 5)		//ESC
 
 		/***************
 		* 4 key combos
@@ -124,17 +143,28 @@
 		/***************
 		* 2 key combos
 		****************/
-		COMBO(R1,&kp F, RTI RTM, 0)				//F
-		COMBO(R2,&kp G, RBI RBM, 0)				//G
-		COMBO(R3,&kp Z, RBM RBR, 0)				//Z
-		COMBO(R4,&kp H, RTM RTR, 0)				//H
-		COMBO(R5,&kp X, RBR RBP, 0)				//X
+		//HORIZONTAL
+		COMBO(R1,&kp DOT,RTP RTR, 0)			//.
+		COMBO(R2,&kp COMMA,RTR RTM, 0)			//,
+		COMBO(R3,&kp V,RTM RTI, 0)				//V
+		COMBO(R4,&kp X,RBM RBI, 0)				//X
+		COMBO(R5,&kp J,RBR RBM, 0)				//J
+
+		//VERTICAL
+		COMBO(R6,&kp RBRC,RTR RBR, 0)			//}
+		COMBO(R7,&kp RBKT,RTM RBM, 0)			//]
+		COMBO(R8,&kp RPAR,RTI RBI, 0)			//)
+
+		//OBLIQUE
+		COMBO(R9,&kp GT,RTR RBI, 0)				//>
+		COMBO(R10,&kp SEMI,ROT RBM, 0)			//;
+		COMBO(R10,&kp COLON,ROT RBI, 0)			//:
 
 		/***************
 		* 3 key combos
 		****************/
-		COMBO(R6,&kp BACKSPACE, RBI RTM RTR, 0 1 2 3 4 5) 	//BACKSPACE
-		COMBO(R7,&kp DELETE, RTI RTM RBR, 0 1 2 3 4 5)		//DELETE
+		COMBO(R6,&kp BACKSPACE, RTI RTM RTR, 0 1 2 3 4 5) 	//BACKSPACE
+		COMBO(R7,&kp ENTER, RBI RBM RBR, 0 1 2 3 4 5)		//ENTER
 		/***************
 		* 4 key combos
 		****************/
@@ -146,9 +176,9 @@
 
 /*  0 = Base
 	.-----------------------------------------------------------.
-	|  N  |  I  |  A  |  E  |	    	|  S  |  T  |  R  |  D  |
-	|  L  |  P  |  O  |  U  |           |  Q  |  C  |  V  |  M  |
-	|  =  |-----|  B  |SPACE|           |ENTER|LFREQ|-----|  /  |
+	|  R  |  S  |  T  |  H  |	    	|  N  |  A  |  I  |  O  |
+	|  Q  |  C  |  G  |  D  |           |  L  |  U  |  Y  |  Z  |
+	|  =  |-----|  '  |SPACE|           |  E  |	TAB |-----|  /  |
 	'-----'     '-----------------------------------'     '-----'
 */
 	keymap {
@@ -158,9 +188,9 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&mt LGUI N	&mt LALT I	&mt LCTRL A	&mt LSHIFT E	&mt RSHIFT S	&mt RCTRL T	&mt RALT R	&mt LGUI D
-			&kp L		&kp P       	&kp O		&kp U     	&kp Q 		&kp C  		&kp V       	&kp M
-			&kp EQUAL               &kp B   &lt HFREQ SPACE      &lt NAVIGATION ENTER  &lt NUMBERS COMMA		&kp FSLH
+			&mt LGUI R	&mt LALT S	&mt LCTRL T	&mt LSHIFT H	&mt RSHIFT N	&mt RCTRL A	&mt RALT I	&mt LGUI O
+			&kp Q		&kp C       	&kp G		&kp D     	&kp L 		&kp U  		&kp Y       	&kp Z
+			&kp EQUAL        &lt FUNCTION APOS   &lt HFREQ SPACE   &lt NAVIGATION E  &lt NUMBERS TAB	&sk RALT
 			>;
 		};
 
@@ -168,18 +198,18 @@
 
 /*  1 = Numbers
 	.-----------------------------------------------------------.
-	|  +  |  1  |  2  |  3  |           |  4  |  5  |  6  |  .  |
-	|  -  |  7  |  8  |  9  |           |  0  |     |     |  ,  |
-	|LCTRL|-----|LSHFT|SPACE|           |ENTER|LALT |-----| LGUI|
+	|  1  |  2  |  3  |  4  |           |  5  |  6  |  7  |  8  |
+	|  +  |  -  |  *  |  =  |           |  9  |  0  |  .  |  ,  |
+	|LCTRL|-----|LSHFT|SPACE|           |ENTER|	TAB |-----| LALT|
 	'-----'     '-----------------------------------'     '-----'
 */
         // LAYER: NUMBERS 1
 		numbers_layer {
 			label = "Numbers";
 			bindings = <
-			&kp PLUS    &kp N1      &kp N2      &kp N3         &kp N4      &kp N5      &kp N6      &kp PERIOD
-			&kp MINUS   &kp N7      &kp N8      &kp N9         &kp N0     &kp N2      &kp N3      &kp COMMA
-			&kp LCTRL               &kp LCTRL  &kp LSHIFT      &kp LSHIFT   &kp LCTRL                &kp LGUI     
+			&kp N1      &kp N2      &kp N3      &kp N4         &kp N5     &kp N6      &kp N7      &kp N8
+			&kp PLUS    &kp MINUS   &kp ASTRK   &kp EQUAL      &kp N9     &kp N0      &kp DOT     &kp COMMA
+			&kp LCTRL               &kp LSHIFT  &kp SPACE      &kp E      &kp TAB                 &kp LGUI     
 			>;
 		};
 // -----------------------------------------------------------------------------
@@ -195,7 +225,7 @@
 		navigation_layer {
 			label = "Navigation";
 			bindings = <
-			&kp F1     &kp F2       &kp F3      &kp F4         &kp HOME        &kp UP      &kp END    &kp LC(PG_UP)
+			&kp F1     &kp F2       &kp F3      &mt RALT F4    &kp HOME        &kp UP      &kp END    &kp LC(PG_UP)
 			&kp F5     &kp F10      &kp F11     &kp F12        &kp LEFT       &kp DOWN    &kp RIGHT   &kp LC(PG_DN)
 			&to BASE                &kp LCTRL   &kp LSHIFT     &kp LSHIFT     &kp LCTRL               &to BASE     
 			>;
@@ -206,7 +236,7 @@
 	.-----------------------------------------------------------.
 	|  -  | {[  |  (  |  =  |           |     |  )  |  ]} |  ;  |
 	|  !  |  @  |  #  |  $  |           |  %  |  &  |  *  |  '  |
-	|  \  |-----|  17 |  18 |           |  19 |  20 |-----|  /  |
+	|  \  |-----|LCTRL|SHIFT|           |SHIFT|LCTRL|-----|  /  |
 	'-----'     '-----------------------------------'     '-----'
 */
         // LAYER: HFREQ 3
@@ -220,25 +250,25 @@
 		};
 // -----------------------------------------------------------------------------
 
-/*  4 = Low Frequency (NOT USED)
+/*  4 = Function
 	.-----------------------------------------------------------.
 	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
 	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
 	|  16 |-----|  17 |  18 |           |  19 |  20 |-----|  21 |
 	'-----'     '-----------------------------------'     '-----'
 */
-        // LAYER: LFREQ 4
-		lfreq_layer {
-			label = "LFreq";
+        // LAYER: Function 4
+		function_layer {
+			label = "Funct";
 			bindings = <
-			&kp GRAVE   &kp SEMI    &kp COLON   &kp BSLH    &kp BSLH    &kp COLON   &kp SEMI   &kp GRAVE 
-			&kp EXCL    &kp MINUS   &kp QMARK   &none       &none       &kp QMARK   &kp MINUS  &kp EXCL
+			&kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7     &kp F8 
+			&kp F9      &kp F10     &kp F11     &kp F12     &none       &none       &none      &none
 			&to BASE              &kp LCTRL   &kp LSHIFT    &kp LSHIFT  &kp LCTRL              &to BASE     
 			>;
 		};
 // -----------------------------------------------------------------------------
 
-/*  5 = Bluetooth
+/*  5 = Bluetooth (NOT USED)
 	.-----------------------------------------------------------.
 	|  0  |  1  |  2  |  3  |           |  4  |  5  |  6  |  7  |
 	|  8  |  9  |  10 |  11 |           |  12 |  13 |  14 |  15 |
@@ -259,3 +289,4 @@
 // -----------------------------------------------------------------------------
     };
 };
+`
